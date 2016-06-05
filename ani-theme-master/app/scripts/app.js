@@ -43,4 +43,5 @@ angular
           controller: 'AcademicsCtrl'
         });
 
+
   });
