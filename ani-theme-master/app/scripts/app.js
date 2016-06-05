@@ -16,7 +16,7 @@ angular
   .config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.when('/dashboard', '/dashboard/overview');
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/home');
 
     $stateProvider
       .state('base', {
@@ -24,27 +24,23 @@ angular
         url: '',
         templateUrl: 'views/base.html'
       })
-        .state('login', {
-          url: '/login',
+        .state('home', {
+          url: '/home',
           parent: 'base',
-          templateUrl: 'views/login.html',
-          controller: 'LoginCtrl'
+          templateUrl: 'views/home.html',
+          controller: 'HomeCtrl'
         })
-        .state('dashboard', {
-          url: '/dashboard',
+        .state('admission', {
+          url: '/admission',
           parent: 'base',
-          templateUrl: 'views/dashboard.html',
-          controller: 'DashboardCtrl'
+          templateUrl: 'views/admission.html',
+          controller: 'AdmissionCtrl'
         })
-          .state('overview', {
-            url: '/overview',
-            parent: 'dashboard',
-            templateUrl: 'views/dashboard/overview.html'
-          })
-          .state('reports', {
-            url: '/reports',
-            parent: 'dashboard',
-            templateUrl: 'views/dashboard/reports.html'
-          });
+				.state('academics', {
+          url: '/academics',
+          parent: 'base',
+          templateUrl: 'views/academics.html',
+          controller: 'AcademicsCtrl'
+        });
 
   });

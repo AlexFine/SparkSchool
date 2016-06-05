@@ -1,0 +1,13 @@
+.tabs{
+	font-size:25px;
+}
+.tabButton{
+	margin-right:30px;
+}
+.tabLink{
+	color:white;
+	text-decoration:none;
+}
+.tabLink:hover{
+	color:green;
+}

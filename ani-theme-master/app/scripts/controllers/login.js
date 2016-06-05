@@ -8,7 +8,7 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('LoginCtrl', function($scope, $location) {
+  .controller('HomeCtrl', function($scope, $location) {
 
     $scope.submit = function() {
 
