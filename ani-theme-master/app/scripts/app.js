@@ -11,7 +11,6 @@
 angular
   .module('yapp', [
     'ui.router',
-    'ngAnimate',
     'ui.bootstrap'
   ])
   .config(function($stateProvider, $urlRouterProvider) {
