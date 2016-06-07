@@ -4,13 +4,7 @@
 .tabButton{
 	margin-right:30px;
 }
-.tabLink{
-	color:white;
-	text-decoration:none;
-}
-.tabLink:hover{
-	color:#005800;
-}
+
 .homeButton:hover{
 	color:green;
 }
@@ -51,3 +45,4 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+
