@@ -8,7 +8,7 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('HomeCtrl', function($scope, $location) {
+  .controller('HomeCtrl', function($scope, $location,  $uibModal, $log) {
 
     function loadJSON(callback) {
 
