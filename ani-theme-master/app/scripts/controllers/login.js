@@ -91,8 +91,8 @@ angular.module('yapp')
   $scope.addSlide = function() {
     var newWidth = 1000 + slides.length + 1;
     slides.push({
-      image: 'http://lorempixel.com/' + newWidth + '/300',
-      text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
+      image: '../images/image' + i + '.jpg',
+      text: ['Nice image','Awesome photograph','That is so cool'][slides.length % 3],
       id: currIndex++
     });
   };
@@ -102,8 +102,8 @@ angular.module('yapp')
     assignNewIndexesToSlides(indexes);
   };
 
-  for (var i = 0; i < 4; i++) {
-    $scope.addSlide();
+  for (var i = 1; i < 4; i++) {
+    $scope.addSlide(i);
   }
 
   // Randomize logic below

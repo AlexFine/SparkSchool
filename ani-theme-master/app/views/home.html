@@ -26,9 +26,9 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 	</div>
 	</div>
 	<div class="container2">
-		<div class="row padd">
+		<div class="row eight" style=" margin:0 auto;">
 			<h1><u>Vision</u></h1>
-			<p class="lean">Our vision is to create a K-8 public school that utilizes hands-on projects, social-emotional learning, and family participation* to create a rich and academically rigorous educational program that will foster deeper learning, encourage creativity, and cultivate strong critical thinking, collaboration and communication skills.  We strive to integrate the arts, foreign language instruction, and physical education into the academic program. We are committed to creating a school that is racially, ethnically, and culturally diverse, reflecting the diversity of our community. </p>
+			<p class="lean">Our vision is to create a K-8 public school that utilizes hands-on projects, social-emotional learning, and family participation* to create a rich and academically rigorous educational program that will foster deeper learning, encourage creativity, and cultivate strong critical thinking, collaboration and communication skills.  We strive to integrate the arts, foreign language instruction, and physical education into the academic program. We are committed to creating a school that is racially, ethnically, and culturally diverse, reflecting the diversity of our community. </p> 
 			<button type="submit" class="standardButtonInverse" ng-click="open('lg')">Learn More About Our Vision</button>
 		</div>
 	</div>
@@ -65,10 +65,10 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 	
 	
 	<div class="container4">
-		<div style="height: 505px">
+		<div>
     <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
       <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <img ng-src="{{slide.image}}" style="height:100%; width:auto; overflow:hidden;">
         <div class="carousel-caption">
           <h4>Slide {{slide.id}}</h4>
           <p>{{slide.text}}</p>
@@ -78,55 +78,42 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
   </div>
  
 	</div>
-	
-	
-	<div class="container1">
-		<div class="row">
-			<div class="col-md-3" style="margin-left:30px; margin-top:20px;">
-				<div class="panel panel-success">
-  				<div class="panel-heading">Panel heading without title</div>
-  					<div class="panel-body">
-							<img src="../images/teach_empathy.png" style="width:230; height:182px; border-radius:10px;">
-  					</div>
-				</div>
+	<div class="container3 row">
+			
+		<div class="col-md-8" style="margin-top:25px; margin-left:30px;">
+				<p class="lean">The Spark Charter academic program utilizes Project-based Learning, Social-Emotional Intelligence, and Parent Partnerships to provide a rigorous and holistic educational program. Our educational model is poised to foster deeper learning, encourage creativity, cultivate strong critical thinking, and promote collaboration and communication skills.  The visual and performing arts, STEAM, Mandarin language instruction, and physical education will be fully integrated into our instructional program. 
+</p>
 				
 			</div>
-			<div class="col-md-3" style="margin-top:20px;">
-				<div class="panel panel-success">
-  				<div class="panel-heading">Panel heading without title</div>
-  					<div class="panel-body">
-							<img src="../images/teach_empathy.png" style="width:115; height:91px; border-radius:10px;">
-  					</div>
-				</div>
-			</div>
-			<div class="col-md-3" style="margin-top:20px;">
-				<div class="panel panel-success">
-  				<div class="panel-heading">Panel heading without title</div>
-  					<div class="panel-body">
-							<img src="../images/teach_empathy.png" style="width:115; height:91px; border-radius:10px;">
-  					</div>
-				</div>
-			</div>
+		<div class="col-md-3" style="margin-top:25px;">
+				<h2>About Us</h2>
 		</div>
+		
 	</div>
 	
+
 	
 	
 	<div class="footer">
+		<div class="col-md-6"> 
+			<h1>Hello</h1>
+			<p>What's up</p>
+		</div> 
+		<div class="col-md-6">
 <form role="form" ng-submit="submit()">
 	<div class="form-content">
 					<div class="form-group">
-						<input type="text" class="form-control input-underline input-lg" id="" placeholder="Email">
+						<input type="text" class="form-control input-underline input-lg" id="" placeholder="Email" style="color:green;">
 					</div>
 
 					<div class="form-group">
-						<input type="password" class="form-control input-underline input-lg" id="" placeholder="Password">
+						<input type="password" class="form-control input-underline input-lg" id="" placeholder="Password" style="color:green;">
 					</div>
 				</div>
-					<button type="submit" class="btn btn-white btn-outline btn-lg btn-rounded">Submit </button>
+					<button type="submit" class="btn btn-success btn-outline btn-lg btn-rounded">Submit </button>
 
 	</form>
-
+</div>
 </div>
 
 </div>
