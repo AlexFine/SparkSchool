@@ -140,15 +140,14 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
             <div ng-repeat="item in items">
 					<div class="row">
 					<div class="col-md-2">
-						<img src="../images/"+{{itemsitem[2]}} style="width:100px; height:100px; border-radius:10px;">
+						<img src={{item[2]}} style="width:100px; height:100px; border-radius:10px;">
 					</div>
 						<div class="col-md-2">
-							<h4>Kindergarten</h4>
-							<h4 class="dim">BananaMan</h4>
+							<h4>{{item[0]}}</h4>
+							<h4 class="dim">{{item[1]}}</h4>
 					</div>
 					<div class="col-md-8">
-						<p class="lead">own up in a military family, Yuvika Singh has lived in many parts of India. She graduated in India with a Bachelor of Arts in Psychology. She also has a diploma in Nursery Primary Teachers’ Training. She has experience as an admissions counselor for a school in Singapore. She has over five years of experience in customer service as an air stewardess and as a bank teller. She now lives with her husband and 5-year-old daughter i</p>
-					</div>
+						<p class="lead">{{item[3]}}</p></div>
 						</div>
 					<hr>
 
