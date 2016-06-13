@@ -11,6 +11,7 @@
 angular
   .module('yapp', [
     'ui.router',
+		
     'ui.bootstrap'
   ])
   .config(function($stateProvider, $urlRouterProvider) {

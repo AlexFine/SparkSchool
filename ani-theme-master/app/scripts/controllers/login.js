@@ -8,8 +8,44 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('HomeCtrl', function($scope, $location,  $uibModal, $log) {
+  .controller('HomeCtrl', function($scope, $location,  $uibModal, $log, $sce) {
+ $scope.dynamicPopover = {
+    content: 'Chris has more than 20 years of experience with project-based learning instruction and leadership for grades K-8. He grew up in Concord, Massachusetts, attended Boston University as an undergraduate, got his Masters In Education from the University of Massachusetts (School Leadership), and attended Villanova’s MBA program.',
+    templateUrl: 'myPopoverTemplate.html',
+    title: "Chris's Bio"
+  };
+	$scope.dynamicPopover2 = {
+    content: 'Chris has more than 20 years of experience with project-based learning instruction and leadership for grades K-8. He grew up in Concord, Massachusetts, attended Boston University as an undergraduate, got his Masters In Education from the University of Massachusetts (School Leadership), and attended Villanova’s MBA program.',
+    templateUrl: 'myPopoverTemplate.html',
+    title: "Chris's Bio"
+  };
+	$scope.dynamicPopover3 = {
+    content: 'Chris has more than 20 years of experience with project-based learning instruction and leadership for grades K-8. He grew up in Concord, Massachusetts, attended Boston University as an undergraduate, got his Masters In Education from the University of Massachusetts (School Leadership), and attended Villanova’s MBA program.',
+    templateUrl: 'myPopoverTemplate.html',
+    title: "Chris's Bio"
+  };
 
+  $scope.placement = {
+    options: [
+      'top',
+      'top-left',
+      'top-right',
+      'bottom',
+      'bottom-left',
+      'bottom-right',
+      'left',
+      'left-top',
+      'left-bottom',
+      'right',
+      'right-top',
+      'right-bottom'
+    ],
+    selected: 'top'
+  };
+  
+  $scope.htmlPopover = $sce.trustAsHtml('<b style="color: red">I can</b> have <div class="label label-success">HTML</div> content');
+	
+	$scope.isCollapsed = false;
 	
 	 $scope.items = ['item1', 'item2', 'item3'];
 
@@ -20,6 +56,27 @@ angular.module('yapp')
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       templateUrl: 'myModalContent.html',
+      controller: 'ModalInstanceCtrl',
+      size: size,
+      resolve: {
+        items: function () {
+          return $scope.items;
+        }
+      }
+    });
+
+    modalInstance.result.then(function (selectedItem) {
+      $scope.selected = selectedItem;
+    }, function () {
+      $log.info('Modal dismissed at: ' + new Date());
+    });
+  };
+	
+	$scope.open2 = function (size) {
+
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'myModalContent2.html',
       controller: 'ModalInstanceCtrl',
       size: size,
       resolve: {
