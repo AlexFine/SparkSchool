@@ -10,7 +10,7 @@
 angular.module('yapp')
   .controller('HomeCtrl', function($scope, $location,  $uibModal, $log, $sce) {
  $scope.dynamicPopover = {
-    content: 'Chris has more than 20 years of experience with project-based learning instruction and leadership for grades K-8. He grew up in Concord, Massachusetts, attended Boston University as an undergraduate, got his Masters In Education from the University of Massachusetts (School Leadership), and attended Villanova’s MBA program.',
+    content: "Chris has more than 20 years of experience with project-based learning instruction and leadership for grades K-8. He grew up in Concord, Massachusetts, attended Boston University as an undergraduate, got his Masters In Education from the University of Massachusetts (School Leadership), and attended Villanova’s MBA program. Chris was Head of School/Executive Director for San Carlos Charter Learning Center -- California's first charter school, and one that Spark modeled after -- for five years (http://scclc.net/). Like Spark, San Carlos Charter emphasizes project-based learning, social-emotional learning, and parent participation, and is also a K-8 school. Prior to assuming the leadership role at San Carlos Charter Learning Center, Chris was an educational consultant for eight years, an administrator at two middle schools, and a teacher for 12 years.  He is married and has a six-year old son.",
     templateUrl: 'myPopoverTemplate.html',
     title: "Chris's Bio"
   };
