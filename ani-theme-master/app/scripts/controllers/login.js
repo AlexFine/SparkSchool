@@ -9,6 +9,15 @@
  */
 angular.module('yapp')
   .controller('HomeCtrl', function($scope, $location,  $uibModal, $log, $sce) {
+    $scope.teachers = [
+      ["Emily Duncan", "Kindergarten",  "1.png","Emily Duncan received her B.A in Studio Art from San Jose State University and is currently completing her Masters in Education from National University. During the last school year, Mrs. Duncan was teaching Kindergarten through 5th grade STEM at St. Joseph of Cupertino. The quote from Margaret Meade, \"Children must be taught how to think, not what to think,\" is the basis for her philosophy in the classroom. Emily is an accomplished visual artist, with many of her pieces hanging in Bay Area residences. She is also a wife and mother (ages 9, 6, & 3), and enjoys marathon running and yoga in her \"spare\" time." ],
+      ["Amanda Chung", "Kindergarten","2.jpg", "Amanda Dee Chung recently graduated with a Master of Arts in Teaching and Credential from Santa Clara University. She also attended San Jose State where she received her bachelor’s degree in Liberal Studies with an emphasis in teaching. Last year, Amanda student-taught both first and third grade in Moreland School District.  Amanda is excited to meet her new students as they start Kindergarten.  She believes that each child can be successful when they follow their dreams, believe in themselves, and are supported.  As a teacher, her goal is to help tap into her students’ potential, and encourage and guide them along the way.  Amanda is happy to become part of a community of educators, students, and parents alike who want to be a part of Spark’s philosophy of education. When Amanda is not teaching, she is playing with her new puppy, planning family activities, swimming, and dancing."],
+      ["Emily Moles","First Grade", "3.png","Emily Moles graduated from Tennessee Technological University with a Bachelor's degree in Elementary Education. After graduation, she taught third grade in Tennessee for two years before moving to Chongqing, China to teach English as a second language to university students. Emily has a passion for helping her students see their own potential and for pushing them to do their best, not only academically but in all aspects of life. A few of her hobbies include listening to music, baking, and exercising. She is very excited about the upcoming year of adventures and learning in First Grade at Spark."],
+      ["Martha Haake","Second Grade", "4.png", "Martha Haake is a graduate of Mount Saint Mary’s University where she received her Master's of Science in Education, and Chapman University where she received her Bachelor of Arts in Communication. This is Martha’s first year teaching and she is excited to begin her journey at Spark Charter! She believes in discovering each student’s unique intelligences and allowing them to construct knowledge by following their passions. Teaching at Spark is a dream come true for Martha, who looks forward to working with parents to create meaningful learning experiences for students. Her hobbies include reading, writing, horseback riding, and being with friends and family (including her pets). "],
+      ["Melissa Hasan","Third Grade", "5.png","Melissa Hasan holds a BA from Kenyon College, an MA from Indiana University, and a Multiple Subjects Credential from San Jose State University.  She taught Special Education for four years and tutored privately for 5 years before recently completing the Multiple Subjects Credential.  Ms. Hasan's teaching philosophy is that all students can learn and should be challenged.  When students are engaged, learning can be fun even when it is hard work.  She is looking forward to learning (and watching her students learn) through hands-on activities and projects.  Ms. Hasan has two lovely young children, and enjoys spending time with them and playing board games with friends." ],
+      ["Usha Ramesh","Fourth Grade","6.jpg","Usha Ramesh has a rich and varied teaching experience, having taught in India, Singapore, and here in the U.S.. She holds a Master's degree in English Literature and Education, and a single-subject English Credential as well as a Multiple Subjects Credential.  Mrs. Ramesh's educational philosophy is to help students dream big and to create critical thinkers and problem solvers. Every child has great potential, and Mrs. Ramesh believes in doing all that she can to maximize learning while students have fun and experience a sense of accomplishment. Mrs. Ramesh's great pillars of strength are her husband, Ramesh, and her two sons. One completed undergrad Bio-Engineering at UCLA with honors and will be pursuing a M.S. at UCSD. The other is at UCSB studying Computer Science Engineering. Mrs. Ramesh is an avid gardener and a classical Bharatnatyam dancer."],
+      ["Wayne Conley", "Fifth/Sixth Grade", "7.jpg", "Wayne Conley holds a Bachelor's degree from UC Santa Barbara, and earned his Master's degree and teaching credential from the University of Phoenix.  Mr. Conley has six years of teaching experience, mostly as a middle school Science teacher.  He has taught in Blossom Hill, Santa Clara, and Watsonville.  Mr. Conley's passion is in the STEM fields, and he enjoys teaching science in a hands-on style.  He loves spending time outdoors, including when he's teaching!"]
+    ]
  $scope.dynamicPopover = {
     content: 'Chris has more than 20 years of experience with project-based learning instruction and leadership for grades K-8. He grew up in Concord, Massachusetts, attended Boston University as an undergraduate, got his Masters In Education from the University of Massachusetts (School Leadership), and attended Villanova’s MBA program.',
     templateUrl: 'myPopoverTemplate.html',
@@ -42,11 +51,11 @@ angular.module('yapp')
     ],
     selected: 'top'
   };
-  
+
   $scope.htmlPopover = $sce.trustAsHtml('<b style="color: red">I can</b> have <div class="label label-success">HTML</div> content');
-	
+
 	$scope.isCollapsed = false;
-	
+
 	 $scope.items = ['item1', 'item2', 'item3'];
 
   $scope.animationsEnabled = true;
@@ -71,7 +80,7 @@ angular.module('yapp')
       $log.info('Modal dismissed at: ' + new Date());
     });
   };
-	
+
 	$scope.open2 = function (size) {
 
     var modalInstance = $uibModal.open({
@@ -81,7 +90,7 @@ angular.module('yapp')
       size: size,
       resolve: {
         items: function () {
-          return $scope.items;
+          return $scope.teachers;
         }
       }
     });
@@ -97,9 +106,9 @@ angular.module('yapp')
     $scope.animationsEnabled = !$scope.animationsEnabled;
   };
 
-	
-	
-	
+
+
+
     function loadJSON(callback) {
 
       var xobj = new XMLHttpRequest();
@@ -136,9 +145,9 @@ angular.module('yapp')
       console.log("test")
     }
     $scope.load();
-	
-	
-	
+
+
+
 	$scope.myInterval = 5000;
   $scope.noWrapSlides = false;
   $scope.active = 0;
@@ -194,8 +203,8 @@ angular.module('yapp')
 
     return array;
   }
-	
-	
+
+
   })
 
 	.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
