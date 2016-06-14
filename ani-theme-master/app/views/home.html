@@ -13,19 +13,19 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 	<div class="row" style="margin-top:10%; margin-bottom:18%;">
 		<div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
 			<h1>Spark School</h1>
-			<h1> <small>Revolutionizing Charter Schools</small> <a href="#" class="small"> Questions? Let's Chat <i class="material-icons" style="font-size:20px;">arrow_forward</i></a> </h1>
+			<h1> <small>Revolutionizing Charter Schools</small> <div ng-click="scroll('bottom')" class="small"> Questions? Let's Chat <i class="material-icons" style="font-size:20px;">arrow_forward</i></div> </h1>
 
 
 
 <br>
-				<a  href="#learnMore" style="color:white;"><button class="standardButton">Learn More <i class="material-icons" style="font-size:13px;">keyboard_arrow_down</i></button></a>
+				<div ng-click="scroll('learn')" style="color:white;"><button class="standardButton">Learn More <i class="material-icons" style="font-size:13px;">keyboard_arrow_down</i></button></div>
 
 
 
 		</div>
 	</div>
 	</div>
-	<div class="container2" ><a name="learnMore"></a>
+	<div class="container2" id="learn">
 		<div class="row eight" style=" margin:0 auto;">
 			<h1><u>Vision</u></h1>
 			<p class="lean">Our vision is to create a K-8 public school that utilizes hands-on projects, social-emotional learning, and family participation* to create a rich and academically rigorous educational program that will foster deeper learning, encourage creativity, and cultivate strong critical thinking, collaboration and communication skills.  We strive to integrate the arts, foreign language instruction, and physical education into the academic program. We are committed to creating a school that is racially, ethnically, and culturally diverse, reflecting the diversity of our community. </p>
@@ -164,8 +164,8 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 ">Apply Today <i class="material-icons" >add_circle_outline</i> </h2></a>
 
 	</div>
-<div class="container6 row">
-		<div class="col-md-5" style="margin-top:15px;">
+<div class="container6 row" id="bottom">
+		<div class="col-md-5" style="margin-top:15px;" >
 			<h2 style=" margin-left:15px;">Contact Us</h2>
 				<p class="lean" style="width:80%; margin-left:10%;">Whether you have a question, comment, complaint, or would just like to chat, please don't hesitate to reach out to us. We love helping our community and inspiring learners.
 </p>

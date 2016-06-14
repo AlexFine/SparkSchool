@@ -8,7 +8,7 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('HomeCtrl', function($scope, $location,  $uibModal, $log, $sce) {
+  .controller('HomeCtrl', function($scope, $location,  $uibModal, $log, $sce, anchorSmoothScroll, $anchorScroll,$document) {
     $scope.teachers = [
       ["Emily Duncan", "Kindergarten",  "../images/1.png","Emily Duncan received her B.A in Studio Art from San Jose State University and is currently completing her Masters in Education from National University. During the last school year, Mrs. Duncan was teaching Kindergarten through 5th grade STEM at St. Joseph of Cupertino. The quote from Margaret Meade, \"Children must be taught how to think, not what to think,\" is the basis for her philosophy in the classroom. Emily is an accomplished visual artist, with many of her pieces hanging in Bay Area residences. She is also a wife and mother (ages 9, 6, & 3), and enjoys marathon running and yoga in her \"spare\" time." ],
       ["Amanda Chung", "Kindergarten","../images/2.jpg", "Amanda Dee Chung recently graduated with a Master of Arts in Teaching and Credential from Santa Clara University. She also attended San Jose State where she received her bachelor’s degree in Liberal Studies with an emphasis in teaching. Last year, Amanda student-taught both first and third grade in Moreland School District.  Amanda is excited to meet her new students as they start Kindergarten.  She believes that each child can be successful when they follow their dreams, believe in themselves, and are supported.  As a teacher, her goal is to help tap into her students’ potential, and encourage and guide them along the way.  Amanda is happy to become part of a community of educators, students, and parents alike who want to be a part of Spark’s philosophy of education. When Amanda is not teaching, she is playing with her new puppy, planning family activities, swimming, and dancing."],
@@ -51,7 +51,14 @@ angular.module('yapp')
     ],
     selected: 'top'
   };
-
+  $scope.scroll = function(place){
+    // $location.hash(place);
+    // $anchorScroll();
+    var section3 = angular.element(document.getElementById(place));
+    console.log(section3)
+    $document.scrollToElementAnimated(section3)
+    // anchorSmoothScroll.scrollTo(place);
+  }
   $scope.htmlPopover = $sce.trustAsHtml('<b style="color: red">I can</b> have <div class="label label-success">HTML</div> content');
 
 	$scope.isCollapsed = false;

@@ -12,7 +12,8 @@ angular
   .module('yapp', [
     'ui.router',
     'ngAnimate',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'duScroll'
   ])
   .config(function($stateProvider, $urlRouterProvider) {
 
