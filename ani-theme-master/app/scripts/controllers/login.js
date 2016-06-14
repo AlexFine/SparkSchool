@@ -59,6 +59,7 @@ angular.module('yapp')
     $document.scrollToElementAnimated(section3)
     // anchorSmoothScroll.scrollTo(place);
   }
+	
   $scope.htmlPopover = $sce.trustAsHtml('<b style="color: red">I can</b> have <div class="label label-success">HTML</div> content');
 
 	$scope.isCollapsed = false;
