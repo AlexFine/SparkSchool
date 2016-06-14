@@ -52,11 +52,11 @@ angular.module('yapp')
     selected: 'top'
   };
   $scope.scroll = function(place){
-    // $location.hash(place);
-    // $anchorScroll();
-    var section3 = angular.element(document.getElementById(place));
-    console.log(section3)
-    $document.scrollToElementAnimated(section3)
+    $location.hash(place);
+    $anchorScroll();
+    // var section3 = angular.element(document.getElementById(place));
+    // console.log(section3)
+    // $document.scrollToElementAnimated(section3)
     // anchorSmoothScroll.scrollTo(place);
   }
   $scope.htmlPopover = $sce.trustAsHtml('<b style="color: red">I can</b> have <div class="label label-success">HTML</div> content');
