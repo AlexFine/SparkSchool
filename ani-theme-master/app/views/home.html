@@ -3,19 +3,36 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 -->
 <div class="home-page">
 	<div class="homeBox">
-	<div class="row toolbar">
-		<div class="row col-xs-6 col-md-4"><a href="#/home"><img src="../styles/icons/512/ios7-bolt-outline.png" style="width:35px; height:35px;" class="logo"></a></div>
-		<div class="row col-xs-6 col-md-4"></div>
-		<div class="row col-xs-6 col-md-4">
-			<p class="tabs"><span class="tabButton"><a href="#/home" class="tabLink">Home</a></span><span class="tabButton"><a href="#/academics" class="tabLink">Academics</a></span><span  class="tabButton"><a href="#/admission" class="tabLink">Admissions</a></span>  </p>
-		</div>
-	</div>
+	<nav class="navbar navbar-default" style="background:transparent; border:0px solid transparent;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/home"><img src="../styles/icons/512/ios7-bolt-outline.png" style="width:35px; height:35px;" class="logo"></a></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li class="navButton"><a href="#"  class="blueBerry" style="color:white;">Home</a></li>
+				<li class="navButton"><a href="#/academics" style="color:white;">Academics</a></li>
+				<li class="navButton"><a href="#/admission" style="color:white;">Admissions</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 	<div class="row" style="margin-top:10%; margin-bottom:18%;">
 		<div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
-			<h1>Spark School</h1>
-			<h1> <small>Revolutionizing Charter Schools</small> <div ng-click="scroll('bottom')" class="small"> Questions? Let's Chat <i class="material-icons" style="font-size:20px;">arrow_forward</i></div> </h1>
-
-
+			<h1>Spark School </h1>
+<!--			{{ width }} {{height}}-->
+			<h1> <small>Revolutionizing Charter Schools</small> <a href="#" ng-click="scroll('bottom')" class="small"> Questions? Let's Chat <i class="material-icons" style="font-size:20px;">arrow_forward</i></a> </h1>
 
 <br>
 				<div ng-click="scroll('learn')" style="color:white;"><button class="standardButton">Learn More <i class="material-icons" style="font-size:13px;">keyboard_arrow_down</i></button></div>
@@ -30,6 +47,7 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 			<h1><u>Vision</u></h1>
 			<p class="lean">Our vision is to create a K-8 public school that utilizes hands-on projects, social-emotional learning, and family participation* to create a rich and academically rigorous educational program that will foster deeper learning, encourage creativity, and cultivate strong critical thinking, collaboration and communication skills.  We strive to integrate the arts, foreign language instruction, and physical education into the academic program. We are committed to creating a school that is racially, ethnically, and culturally diverse, reflecting the diversity of our community. </p>
 			<button type="submit" class="standardButtonInverse" ng-click="open('lg')">Learn More About Our Vision</button>
+			
 		</div>
 	</div>
 	<script type="text/ng-template" id="myModalContent.html">
@@ -101,10 +119,10 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 		</div>
 
 	</div>
-		<div class="container2" ><a name="learnMore"></a>
+		<div class="container2b" ><a name="learnMore"></a>
 		<div class="row nine" style=" margin:0 auto;">
 			<h1><u>Administration</u></h1>
-			<p class="lean">Spark School has a diverse group of administrators and teachers with advance degrees, ready to help your student learn. <br> <a ng-click="open2('lg')" href="#">Learn more about our teachers!</a></p>
+			<p class="lean">Spark School has a diverse group of administrators and teachers with advance degrees, ready to help your student learn. <br> <button ng-click="open2('lg')" href="#" class="standardButtonInverse">Learn more about our teachers!</button></p>
 
 			<div class="col-md-4">
 				<a  uib-popover="{{dynamicPopover.content}}" popover-title="{{dynamicPopover.title}}" href="#"><img src="../images/chris.jpg" style="width:130px; height:130px; border-radius:10px;"></a><hr>
@@ -157,6 +175,64 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
             <button class="btn btn-warning btn-outline" type="button" ng-click="cancel()">Close</button>
         </div>
     </script>
+	
+<!--
+	<div class="container10">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="../images/baseimage.jpg" style="width:100%; height:702px;">
+			</div>
+			<div class="col-md-6">
+				<h1>Hello, here's more information</h1>
+			</div>
+		</div>
+	</div>
+-->
+	
+	<div class="container10 row">
+		<div class="col-md-6" style="margin-top:10px;">
+				<img src="../images/baseimage.jpg" style="width:244px; height:326px; border-radius:10px;">
+			<img src="../images/baseimage2.jpg" style="width:244px; height:326px; border-radius:10px;">
+		</div>
+		<div class="col-md-6" style="margin-top:15px; width:500px;">
+			<h2 style="font-weight:400;">Founded For Families - <span style="color:#E8E8E8; font-size:25px;"> Founded By Families</span></h2>
+			<hr>
+				<p class="lean">Spark Charter School was born out of the common vision and tireless work of about 30 Sunnyvale families.  Our founders' pool is extremely diverse, comprised of families from all over the world and from a wide range of socio-economic backgrounds.  What we all share in common is the desire to provide a rich, enjoyable academic experience for our children.  
+
+</p>
+
+			</div>
+	</div>
+	<div class="container11 row">
+		<div style="width:90%; margin-left:10%">
+				<h1><u>FAQ</u></h1>
+			<div class="col-md-6">
+				<div ng-repeat="question in faq" ng-if="question.num < 6">
+				<a href="#" style="text-decoration:none; color:white;"><p class="lead"  ng-click="isCollapsed = !isCollapsed">Q{{question.num}}. {{question.q}} <i class="material-icons" ng-if="!isCollapsed">keyboard_arrow_down</i><i class="material-icons" ng-if="isCollapsed">keyboard_arrow_up</i></p></a>
+				<p class="lead"  uib-collapse="!isCollapsed" style="line-height:1.2; font-size:17px; font-weight:300;">A{{question.num}}. {{question.a}}.</p>
+				<hr>
+					</div>
+			</div>
+			<div class="col-md-6">
+				<div ng-repeat="question in faq" ng-if="question.num > 5">
+					<a href="#"  style="text-decoration:none; color:white;"><p class="lead"  ng-click="isCollapsed = !isCollapsed">Q{{question.num}}. {{question.q}}<i class="material-icons" ng-if="!isCollapsed">keyboard_arrow_down</i><i class="material-icons" ng-if="isCollapsed">keyboard_arrow_up</i></p></a>
+				<p class="lead"  uib-collapse="!isCollapsed" style="line-height:1.2; font-size:17px; font-weight:300;">A{{question.num}}. {{question.a}}.</p>
+				<hr>
+					</div>
+			</div>
+<!--
+				<p class="lead"  ng-click="isCollapsed = !isCollapsed">1. How are charter schools funded?</p>
+				<p class="lead"  uib-collapse="!isCollapsed">1. Charter schools are publicly funded based on student enrollment by local, state and federal tax dollars, just like other public schools.</p>
+			<p class="lead"  ng-click="isCollapsed = !isCollapsed">1. How are charter schools funded?</p>
+				<p class="lead"  uib-collapse="!isCollapsed">1. Charter schools are publicly funded based on student enrollment by local, state and federal tax dollars, just like other public schools.</p>
+			<p class="lead"  ng-click="isCollapsed = !isCollapsed">1. How are charter schools funded?</p>
+				<p class="lead"  uib-collapse="!isCollapsed">1. Charter schools are publicly funded based on student enrollment by local, state and federal tax dollars, just like other public schools.</p>
+			<p class="lead"  ng-click="isCollapsed = !isCollapsed">1. How are charter schools funded?</p>
+				<p class="lead"  uib-collapse="!isCollapsed">1. Charter schools are publicly funded based on student enrollment by local, state and federal tax dollars, just like other public schools.</p>
+-->
+		</div>
+		
+	</div>
 
 	<div class="container7">
 		<div style="height:10px;"></div>
@@ -184,7 +260,7 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 						<input type="text" class="form-control input-underline input-lg" id="" placeholder="Comments">
 					</div>
 				</div>
-					<button type="submit" class="standardButton">Submit </button>
+					<button type="submit" class="standardButton" style="margin-bottom: 20px;">Submit </button>
 
 	</form>
 

@@ -8,7 +8,18 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('HomeCtrl', function($scope, $location,  $uibModal, $log, $sce, anchorSmoothScroll, $anchorScroll,$document) {
+  .controller('HomeCtrl', function($scope, $location,  $uibModal, $log, $sce, anchorSmoothScroll, $anchorScroll,$document, $window) {
+	
+	$scope.width = $window.innerWidth;
+	$scope.sub1 = Math.log($scope.width);
+	$scope.sub2 = Math.log(9.8*$scope.width);
+	$scope.ln10 = Math.log(10)
+	$scope.sub25 = $scope.sub2/$scope.ln10
+	$scope.sub3 = 471*$scope.sub25
+	$scope.sub4 = 2096.96738123 - $scope.sub3;
+	$scope.height = 1000;
+
+	
     $scope.teachers = [
       ["Emily Duncan", "Kindergarten",  "../images/1.png","Emily Duncan received her B.A in Studio Art from San Jose State University and is currently completing her Masters in Education from National University. During the last school year, Mrs. Duncan was teaching Kindergarten through 5th grade STEM at St. Joseph of Cupertino. The quote from Margaret Meade, \"Children must be taught how to think, not what to think,\" is the basis for her philosophy in the classroom. Emily is an accomplished visual artist, with many of her pieces hanging in Bay Area residences. She is also a wife and mother (ages 9, 6, & 3), and enjoys marathon running and yoga in her \"spare\" time." ],
       ["Amanda Chung", "Kindergarten","../images/2.jpg", "Amanda Dee Chung recently graduated with a Master of Arts in Teaching and Credential from Santa Clara University. She also attended San Jose State where she received her bachelor’s degree in Liberal Studies with an emphasis in teaching. Last year, Amanda student-taught both first and third grade in Moreland School District.  Amanda is excited to meet her new students as they start Kindergarten.  She believes that each child can be successful when they follow their dreams, believe in themselves, and are supported.  As a teacher, her goal is to help tap into her students’ potential, and encourage and guide them along the way.  Amanda is happy to become part of a community of educators, students, and parents alike who want to be a part of Spark’s philosophy of education. When Amanda is not teaching, she is playing with her new puppy, planning family activities, swimming, and dancing."],
@@ -59,9 +70,66 @@ angular.module('yapp')
     // $document.scrollToElementAnimated(section3)
     // anchorSmoothScroll.scrollTo(place);
   }
+	
   $scope.htmlPopover = $sce.trustAsHtml('<b style="color: red">I can</b> have <div class="label label-success">HTML</div> content');
 
-	$scope.isCollapsed = false;
+	$scope.isCollapsed1 = false;
+	$scope.isCollapsed2 = false;
+	$scope.isCollapsed3 = false;
+	$scope.isCollapsed4 = false;
+	$scope.isCollapsed5 = false;
+	$scope.isCollapsed6 = false;
+	$scope.isCollapsed7 = false;
+	$scope.isCollapsed8 = false;
+	$scope.isCollapsed9 = false;
+	
+	$scope.faq = [{
+		num: 1,
+		q:'What is a charter school?',
+		a:"Charter schools are publicly funded schools but function somewhat differently from traditional public schools. They operate independently under a performance agreement with a chartering authority (in Spark's case, the Santa Clara County Office of Education).  Because charter schools do not have to comply with certain sections of the state Education Code, they are less regulated and have more independence in making decisions than traditional public schools. Instead, they are governed primarily by their charters, which are generally granted for five years and renewed based on the school's performance.  Charter schools allow parents, organizations, or community groups to restore, reinvent, and re-energize our public school system."
+	},
+		{
+		num:2,
+		q:"How are charter schools funded?",
+		a:"Charter schools are publicly funded based on student enrollment by local, state and federal tax dollars, just like other public schools."
+	},
+		{
+		num:3,
+		q:"Is Spark a For-Profit or Corporate Charter School?",
+		a:"No, Spark Charter is a non-profit charter school which was formed by a group of Sunnyvale parents, with the assistance of a group of education experts, who wanted to see this type of educational option available in Sunnyvale as it is in so many other surrounding cities (San Jose, San Carlos, Cupertino, Mountain View, Santa Clara, etc.)"
+	},
+		{
+		num:4,
+		q:"Who is eligible to apply? ",
+		a:"Any student wishing to attend a Charter school can apply.  Charter schools must typically give admission priority to students residing within their district, and then may admit students from outside the district if there is space."
+	},
+		{
+		num:5,
+		q:"How is a charter school different from the schools of choice in the district?",
+		a:"Charter schools are exempt from some of the regulations that apply to other public schools. They have more flexibility in creating curriculum, and can also offer novel educational approaches. Charter schools must meet the same standards of quality that apply to all public schools."
+	},{
+		num:6,
+		q:"Do charter schools select only the high performing students or benefit from self-selection?",
+		a:"No.  Charter schools are public schools and cannot discriminate or self-select their students.  Spark Charter in particular places very high value on racial, ethnic, socio-economic, and cultural diversity, and is committed to reaching out to all populations within its community."
+	},{
+		num:7,
+		q:"Does Spark have before and after-school care?",
+		a:"Yes, Spark offers before-school care from 7:30-8:30 am, and after-school care from 3-6 pm.  "
+	},{
+		num:8,
+		q:"How will Spark measure student achievement?",
+		a:"Students will be assessed at regular intervals according to the common core standards, as charter schools are held to the same standards as traditional public schools. Although it is not Spark's philosophy to teach to the test, student performance is very important and will be tracked diligently using formal and informal assessments. As a part of the informal assessments, Spark will use individual learning plans for each of its students, where personalized goals are set up at the beginning of a trimester and revisited throughout the year."
+	}
+	,{
+		num:9,
+		q:"Will I be required to volunteer at school?",
+		a:"By law, no public school (district or charter) can require parent participation.  Parent participation at Spark is not a requirement for application, and no child will be denied enrollment because parents have not participated.  Spark encourages parent participation from every family in whatever way is manageable for them. Having regular volunteers in the classroom and in the Spark community is the only way Spark can deliver on its promise of small-group, project-based instruction.  Please visit our Parents as Partners page for more details. "
+	}
+	,{
+		num:10,
+		q:"But I'm not a teacher; how can I possibly be helpful?",
+		a:"Many parents have a fear of participating in their child's classroom because they're not sure they have anything valuable to offer.  We are here to prove you wrong!!  Every parent can and will make a difference in our children's education by participating   There are infinite ways to get involved that will help enrich the learning experience of all Spark students. It could be teaching students how to cook traditional dishes from your native culture (here we have chemistry, math, geography, history, and life skills all wrapped up into one fun activity!)   Or it might be helping to organize a community gardening event on the weekend. Can you help with foreign language instruction or tutor an EL student?  Are you good at carpentry? Sports? Music?  Everyone has a talent, and students can benefit immensely from exposure to a wide range of skills and knowledge.  Research shows that the more parents are involved at school, the greater their child's achievement level. Having volunteers in our classrooms will help our teachers deliver the hands-on, small group instruction that is fundamental to Spark. "
+	}];
 
 	 $scope.items = ['item1', 'item2', 'item3'];
 
