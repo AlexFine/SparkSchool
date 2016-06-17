@@ -11,7 +11,14 @@ angular.module('yapp')
   .controller('HomeCtrl', function($scope, $location,  $uibModal, $log, $sce, anchorSmoothScroll, $anchorScroll,$document, $window) {
 	
 	$scope.width = $window.innerWidth;
-	
+	$scope.sub1 = Math.log($scope.width);
+	$scope.sub2 = Math.log(9.8*$scope.width);
+	$scope.ln10 = Math.log(10)
+	$scope.sub25 = $scope.sub2/$scope.ln10
+	$scope.sub3 = 471*$scope.sub25
+	$scope.sub4 = 2096.96738123 - $scope.sub3;
+	$scope.height = 1000;
+
 	
     $scope.teachers = [
       ["Emily Duncan", "Kindergarten",  "../images/1.png","Emily Duncan received her B.A in Studio Art from San Jose State University and is currently completing her Masters in Education from National University. During the last school year, Mrs. Duncan was teaching Kindergarten through 5th grade STEM at St. Joseph of Cupertino. The quote from Margaret Meade, \"Children must be taught how to think, not what to think,\" is the basis for her philosophy in the classroom. Emily is an accomplished visual artist, with many of her pieces hanging in Bay Area residences. She is also a wife and mother (ages 9, 6, & 3), and enjoys marathon running and yoga in her \"spare\" time." ],

@@ -12,7 +12,8 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 	</div>
 	<div class="row" style="margin-top:10%; margin-bottom:18%;">
 		<div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
-			<h1>Spark School {{ width }}</h1>
+			<h1>Spark School </h1>
+<!--			{{ width }} {{height}}-->
 			<h1> <small>Revolutionizing Charter Schools</small> <a href="#" ng-click="scroll('bottom')" class="small"> Questions? Let's Chat <i class="material-icons" style="font-size:20px;">arrow_forward</i></a> </h1>
 
 <br>
@@ -45,7 +46,7 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
         </div>
     </script>
 
-	<div class="container3 row">
+	<div class="container3 row" style="height:{{sub4}}px;">
 		<div class="col-md-5" style="margin-top:50px;">
 				<h2>About Us</h2>
 		</div>
@@ -99,7 +100,7 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 		</div>
 
 	</div>
-		<div class="container2" ><a name="learnMore"></a>
+		<div class="container2b" ><a name="learnMore"></a>
 		<div class="row nine" style=" margin:0 auto;">
 			<h1><u>Administration</u></h1>
 			<p class="lean">Spark School has a diverse group of administrators and teachers with advance degrees, ready to help your student learn. <br> <button ng-click="open2('lg')" href="#" class="standardButtonInverse">Learn more about our teachers!</button></p>
@@ -188,14 +189,14 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 				<h1><u>FAQ</u></h1>
 			<div class="col-md-6">
 				<div ng-repeat="question in faq" ng-if="question.num < 6">
-				<a href="#" style="text-decoration:none; color:white;"><p class="lead"  ng-click="isCollapsed = !isCollapsed">Q{{question.num}}. {{question.q}}? <i class="material-icons" ng-if="!isCollapsed">keyboard_arrow_down</i><i class="material-icons" ng-if="isCollapsed">keyboard_arrow_up</i></p></a>
+				<a href="#" style="text-decoration:none; color:white;"><p class="lead"  ng-click="isCollapsed = !isCollapsed">Q{{question.num}}. {{question.q}} <i class="material-icons" ng-if="!isCollapsed">keyboard_arrow_down</i><i class="material-icons" ng-if="isCollapsed">keyboard_arrow_up</i></p></a>
 				<p class="lead"  uib-collapse="!isCollapsed" style="line-height:1.2; font-size:17px; font-weight:300;">A{{question.num}}. {{question.a}}.</p>
 				<hr>
 					</div>
 			</div>
 			<div class="col-md-6">
 				<div ng-repeat="question in faq" ng-if="question.num > 5">
-					<a href="#"  style="text-decoration:none; color:white;"><p class="lead"  ng-click="isCollapsed = !isCollapsed">Q{{question.num}}. {{question.q}}?<i class="material-icons" ng-if="!isCollapsed">keyboard_arrow_down</i><i class="material-icons" ng-if="isCollapsed">keyboard_arrow_up</i></p></a>
+					<a href="#"  style="text-decoration:none; color:white;"><p class="lead"  ng-click="isCollapsed = !isCollapsed">Q{{question.num}}. {{question.q}}<i class="material-icons" ng-if="!isCollapsed">keyboard_arrow_down</i><i class="material-icons" ng-if="isCollapsed">keyboard_arrow_up</i></p></a>
 				<p class="lead"  uib-collapse="!isCollapsed" style="line-height:1.2; font-size:17px; font-weight:300;">A{{question.num}}. {{question.a}}.</p>
 				<hr>
 					</div>
