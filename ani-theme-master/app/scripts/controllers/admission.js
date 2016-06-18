@@ -8,7 +8,15 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('AdmissionCtrl', function($scope, $location) {
+  .controller('AdmissionCtrl', function($scope, $location, $anchorScroll) {
+    $scope.scroll = function(place){
+      $location.hash(place);
+      $anchorScroll();
+      // var section3 = angular.element(document.getElementById(place));
+      // console.log(section3)
+      // $document.scrollToElementAnimated(section3)
+      // anchorSmoothScroll.scrollTo(place);
+    }
     function loadJSON(callback) {
 
       var xobj = new XMLHttpRequest();
