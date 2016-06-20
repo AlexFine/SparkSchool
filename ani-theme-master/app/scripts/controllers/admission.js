@@ -9,6 +9,8 @@
  */
 angular.module('yapp')
   .controller('AdmissionCtrl', function($scope, $location, $anchorScroll) {
+		$scope.collapse = true;
+
     $scope.scroll = function(place){
       $location.hash(place);
       $anchorScroll();

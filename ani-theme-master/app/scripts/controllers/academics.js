@@ -9,6 +9,7 @@
  */
 angular.module('yapp')
   .controller('AcademicsCtrl', function($scope, $location,$uibModal, $anchorScroll) {
+	$scope.collapse = true;
 
     $scope.submit = function() {
 
