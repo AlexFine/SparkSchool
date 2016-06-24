@@ -82,17 +82,18 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 	<div class="well well-lg">
 		
 		
-		<p>var name = <input type="text" class="input" placeholder="What's your name?" ng-model="enteredName"></p>
-		<p>var city = <input type="text" class="input" placeholder="What city do you live in?" ng-model="city"></p>
-		<p>var favoriteHobby = <input type="text" class="input" placeholder="What do you like to do in your free time?" ng-model="favoriteHobby"></p>
+		<p style="color:black;"><span class="var">var</span> <span class="name">name</span> = <input type="text" class="input puts" placeholder="What's your name?" ng-model="enteredName"></p>
+		<p style="color:black;"><span class="var">var</span> <span class="name">city</span> = <input type="text" class="input puts" placeholder="What city do you live in?" ng-model="city"></p>
+		<p style="color:black;"><span class="var">var</span> <span class="name">favoriteHobby</span> = <input type="text" class="input puts" placeholder="What do you like to do in your free time?" ng-model="favoriteHobby"></p>
 		<p>//These two dashes create a comment in javascript. The computer will not read comments. </p>
-		<p>console.log("Hello, my name is " + name + ", I live in " + city + "and in my free time I love to " + favoriteHobby + ".")</p>
+		<p style="color:black;"><span class="var">console.log</span>(<span class="puts">"Hello, my name is "</span> + <span class="name">name</span> + <span class="puts">", I live in "</span> + <span class="name">city</span> + <span class="puts">"and in my free time I love to "</span> + <span class="name">favoriteHobby</span> + ".")</p>
 		
 	</div>
 	</div>
 	<div class="col-md-4">
 		<div class="well well-lg" style="background:white;">
-		
+		<p style="color:red;">Output</p>
+			<hr style="background:red; border:1px solid red;">
 		<p>Hello, my name is {{enteredName}}, I live in {{city}} and in my free time I love to {{favoriteHobby}}.</p>
 		
 	</div>
