@@ -36,11 +36,46 @@
 
 
 <br>
-				<button type="submit" class="standardButton">Learn More <i class="material-icons" style="font-size:13px;">keyboard_arrow_down</i></button>
+				<button type="submit" class="standardButton">View Lottery Results</button>
 
 
 
 		</div>
 	</div>
 	</div>
+
+
+<div class="container11 row">
+		<div style="width:90%; margin-left:10%">
+				<h1><u>FAQ</u></h1>
+			<div class="col-md-6">
+				<div ng-repeat="question in faq" ng-if="question.num < 6">
+				<a href="#/admission" style="text-decoration:none; color:white;"><p class="lead"  ng-click="isCollapsed = !isCollapsed">Q{{question.num}}. {{question.q}} <i class="material-icons" ng-if="!isCollapsed">keyboard_arrow_down</i><i class="material-icons" ng-if="isCollapsed">keyboard_arrow_up</i></p></a>
+				<p class="lead"  uib-collapse="!isCollapsed" style="line-height:1.2; font-size:17px; font-weight:300;">A{{question.num}}. {{question.a}}.</p>
+				<hr>
+					</div>
+			</div>
+			<div class="col-md-6">
+				<div ng-repeat="question in faq" ng-if="question.num > 5">
+					<a href="#/admission"  style="text-decoration:none; color:white;"><p class="lead"  ng-click="isCollapsed = !isCollapsed">Q{{question.num}}. {{question.q}}<i class="material-icons" ng-if="!isCollapsed">keyboard_arrow_down</i><i class="material-icons" ng-if="isCollapsed">keyboard_arrow_up</i></p></a>
+				<p class="lead"  uib-collapse="!isCollapsed" style="line-height:1.2; font-size:17px; font-weight:300;">A{{question.num}}. {{question.a}}.</p>
+				<hr>
+					</div>
+			</div>
+<!--
+				<p class="lead"  ng-click="isCollapsed = !isCollapsed">1. How are charter schools funded?</p>
+				<p class="lead"  uib-collapse="!isCollapsed">1. Charter schools are publicly funded based on student enrollment by local, state and federal tax dollars, just like other public schools.</p>
+			<p class="lead"  ng-click="isCollapsed = !isCollapsed">1. How are charter schools funded?</p>
+				<p class="lead"  uib-collapse="!isCollapsed">1. Charter schools are publicly funded based on student enrollment by local, state and federal tax dollars, just like other public schools.</p>
+			<p class="lead"  ng-click="isCollapsed = !isCollapsed">1. How are charter schools funded?</p>
+				<p class="lead"  uib-collapse="!isCollapsed">1. Charter schools are publicly funded based on student enrollment by local, state and federal tax dollars, just like other public schools.</p>
+			<p class="lead"  ng-click="isCollapsed = !isCollapsed">1. How are charter schools funded?</p>
+				<p class="lead"  uib-collapse="!isCollapsed">1. Charter schools are publicly funded based on student enrollment by local, state and federal tax dollars, just like other public schools.</p>
+-->
+		</div>
+
+	</div>
+
+
+
 </div>
