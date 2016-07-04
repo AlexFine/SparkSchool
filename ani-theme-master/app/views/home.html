@@ -80,14 +80,14 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 	<div class="row">
 	<div class="col-md-8">
 	<div class="well well-lg">
-		
-		
+
+
 		<p style="color:black;"><span class="var">var</span> <span class="name">name</span> = <input type="text" class="input puts" placeholder="What's your name?" ng-model="enteredName"></p>
 		<p style="color:black;"><span class="var">var</span> <span class="name">city</span> = <input type="text" class="input puts" placeholder="What city do you live in?" ng-model="city"></p>
 		<p style="color:black;"><span class="var">var</span> <span class="name">favoriteHobby</span> = <input type="text" class="input puts" placeholder="What do you like to do in your free time?" ng-model="favoriteHobby"></p>
 		<p>//These two dashes create a comment in javascript. The computer will not read comments. </p>
 		<p style="color:black;"><span class="var">console.log</span>(<span class="puts">"Hello, my name is "</span> + <span class="name">name</span> + <span class="puts">", I live in "</span> + <span class="name">city</span> + <span class="puts">"and in my free time I love to "</span> + <span class="name">favoriteHobby</span> + ".")</p>
-		
+
 	</div>
 	</div>
 	<div class="col-md-4">
@@ -95,14 +95,14 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 		<p style="color:red;">Output</p>
 			<hr style="background:red; border:1px solid red;">
 		<p>Hello, my name is {{enteredName}}, I live in {{city}} and in my free time I love to {{favoriteHobby}}.</p>
-		
+
 	</div>
 	</div>
 		</div>
 </div>
-	
+
 	<div class="container3 row">
-		
+
 		<div class="col-md-5 date" style="margin:30px;">
 				<p class="lean">June 31st - Event number one! </p>
 				<p class="lean">June 31st - Event number two! </p>
@@ -309,17 +309,17 @@ Inspired by http://dribbble.com/shots/917819-iPad-Calendar-Login?list=shots&sort
 </p>
 		</div>
 	<div class="col-md-5" style="margin-top:15px;">
-		<form role="form" ng-submit="submit()">
+		<form role="form" ng-submit="submitForm()" name="form1">
 	<div class="form-content">
 					<div class="form-group" style="border-color:rgba(95,182,95,1);">
-						<input type="text" class="form-control input-underline input-lg" id="" placeholder="Name">
+						<input type="text" ng-model="form1.name"class="form-control input-underline input-lg" id="" placeholder="Name">
 					</div>
 						<div class="form-group">
-						<input type="text" class="form-control input-underline input-lg" id="" placeholder="Email" >
+						<input type="email" ng-model="form1.email" class="form-control input-underline input-lg" id="" placeholder="Email" >
 					</div>
 
 					<div class="form-group">
-						<input type="text" class="form-control input-underline input-lg" id="" placeholder="Comments">
+						<input type="text" ng-model="form1.comments"class="form-control input-underline input-lg" id="" placeholder="Comments">
 					</div>
 				</div>
 					<button type="submit" class="standardButton" style="margin-bottom: 20px;">Submit </button>

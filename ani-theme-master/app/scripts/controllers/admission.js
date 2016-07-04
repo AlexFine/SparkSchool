@@ -10,7 +10,7 @@
 angular.module('yapp')
   .controller('AdmissionCtrl', function($scope, $location,  $uibModal, $log, $sce, anchorSmoothScroll, $anchorScroll,$document, $window) {
 		$scope.collapse = true;
-	
+
 	$scope.isCollapsed1 = false;
 	$scope.isCollapsed2 = false;
 	$scope.isCollapsed3 = false;
@@ -20,7 +20,7 @@ angular.module('yapp')
 	$scope.isCollapsed7 = false;
 	$scope.isCollapsed8 = false;
 	$scope.isCollapsed9 = false;
-	
+
 	$scope.faq = [{
 		num: 1,
 		q:'What is a charter school?',
@@ -69,8 +69,8 @@ angular.module('yapp')
 		a:"Many parents have a fear of participating in their child's classroom because they're not sure they have anything valuable to offer.  We are here to prove you wrong!!  Every parent can and will make a difference in our children's education by participating   There are infinite ways to get involved that will help enrich the learning experience of all Spark students. It could be teaching students how to cook traditional dishes from your native culture (here we have chemistry, math, geography, history, and life skills all wrapped up into one fun activity!)   Or it might be helping to organize a community gardening event on the weekend. Can you help with foreign language instruction or tutor an EL student?  Are you good at carpentry? Sports? Music?  Everyone has a talent, and students can benefit immensely from exposure to a wide range of skills and knowledge.  Research shows that the more parents are involved at school, the greater their child's achievement level. Having volunteers in our classrooms will help our teachers deliver the hands-on, small group instruction that is fundamental to Spark. "
 	}];
 
-	
-	
+
+
 
     $scope.scroll = function(place){
       $location.hash(place);
@@ -113,7 +113,9 @@ angular.module('yapp')
     // $scope.page = JSON.parse(response);
     // $scope.name = $scope.page.name_of_school
     $scope.submit = function(t) {
-      console.log("test")
+      console.log(t)
+      
+
     }
     $scope.load()
 

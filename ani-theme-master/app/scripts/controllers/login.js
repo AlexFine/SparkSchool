@@ -9,7 +9,7 @@
  */
 angular.module('yapp')
   .controller('HomeCtrl', function($scope, $location,  $uibModal, $log, $sce, anchorSmoothScroll, $anchorScroll,$document, $window) {
-	
+
 	$scope.collapse = true;
 	$scope.width = $window.innerWidth;
 	$scope.sub1 = Math.log($scope.width);
@@ -20,7 +20,7 @@ angular.module('yapp')
 	$scope.sub4 = 2096.96738123 - $scope.sub3;
 	$scope.height = 1000;
 
-	
+
     $scope.teachers = [
       ["Emily Duncan", "Kindergarten",  "../images/1.png","Emily Duncan received her B.A in Studio Art from San Jose State University and is currently completing her Masters in Education from National University. During the last school year, Mrs. Duncan was teaching Kindergarten through 5th grade STEM at St. Joseph of Cupertino. The quote from Margaret Meade, \"Children must be taught how to think, not what to think,\" is the basis for her philosophy in the classroom. Emily is an accomplished visual artist, with many of her pieces hanging in Bay Area residences. She is also a wife and mother (ages 9, 6, & 3), and enjoys marathon running and yoga in her \"spare\" time." ],
       ["Amanda Chung", "Kindergarten","../images/2.jpg", "Amanda Dee Chung recently graduated with a Master of Arts in Teaching and Credential from Santa Clara University. She also attended San Jose State where she received her bachelor’s degree in Liberal Studies with an emphasis in teaching. Last year, Amanda student-taught both first and third grade in Moreland School District.  Amanda is excited to meet her new students as they start Kindergarten.  She believes that each child can be successful when they follow their dreams, believe in themselves, and are supported.  As a teacher, her goal is to help tap into her students’ potential, and encourage and guide them along the way.  Amanda is happy to become part of a community of educators, students, and parents alike who want to be a part of Spark’s philosophy of education. When Amanda is not teaching, she is playing with her new puppy, planning family activities, swimming, and dancing."],
@@ -71,7 +71,7 @@ angular.module('yapp')
     // $document.scrollToElementAnimated(section3)
     // anchorSmoothScroll.scrollTo(place);
   }
-	
+
   $scope.htmlPopover = $sce.trustAsHtml('<b style="color: red">I can</b> have <div class="label label-success">HTML</div> content');
 
 	$scope.isCollapsed1 = false;
@@ -83,7 +83,7 @@ angular.module('yapp')
 	$scope.isCollapsed7 = false;
 	$scope.isCollapsed8 = false;
 	$scope.isCollapsed9 = false;
-	
+
 	$scope.faq = [{
 		num: 1,
 		q:'What is a charter school?',
@@ -210,7 +210,6 @@ angular.module('yapp')
         console.log($scope.name);
         console.log($scope.name)
         $scope.$apply()
-        $scope.submit()
 
       });
 
@@ -218,7 +217,14 @@ angular.module('yapp')
     // $scope.page = JSON.parse(response);
     // $scope.name = $scope.page.name_of_school
     $scope.submit = function(t) {
-      console.log("test")
+      console.log(t)
+    }
+    $scope.submitForm = function(t) {
+      console.log(t)
+      console.log($scope.form1)
+      var text = "Hi Spark School, \n my name is " +$scope.form1.name +" and I wanted to say this: " + $scope.form1.comments + " \n Thanks my email is " +$scope.form1.email
+      window.open('mailto:test@example.com?subject=spark\nSchool&body='+text);
+
     }
     $scope.load();
 
