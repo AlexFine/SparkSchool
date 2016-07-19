@@ -23,8 +23,8 @@ angular.module('yapp')
 
 	$scope.faq = [{
 		num: 1,
-		q:'What is a charter school?',
-		a:"Charter schools are publicly funded schools but function somewhat differently from traditional public schools. They operate independently under a performance agreement with a chartering authority (in Spark's case, the Santa Clara County Office of Education).  Because charter schools do not have to comply with certain sections of the state Education Code, they are less regulated and have more independence in making decisions than traditional public schools. Instead, they are governed primarily by their charters, which are generally granted for five years and renewed based on the school's performance.  Charter schools allow parents, organizations, or community groups to restore, reinvent, and re-energize our public school system."
+		q:'Enrollment Policy:',
+		a:"Spark Charter School is a public school with limited enrollment. Students are placed according to space availability and by lottery.  Each year the Spark enrolls 48 kindergarten learners. Enrollment for other grades is allocated according to available space in the classrooms. <br> Each year, the enrollment process begins when school opens after the winter break. The enrollment process includes orientations, tours, an application and a lottery."
 	},
 		{
 		num:2,

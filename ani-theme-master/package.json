@@ -48,5 +48,15 @@
     "wiredep": "^2.2.2",
     "yargs": "^3.3.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "name": "sparkschool",
+  "description": "## [Demo](http://rawgit.com/start-angular/ani-theme/master/dist/index.html)",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
 }

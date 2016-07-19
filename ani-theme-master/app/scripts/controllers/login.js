@@ -10,15 +10,15 @@
 angular.module('yapp')
   .controller('HomeCtrl', function($scope, $location,  $uibModal, $log, $sce, anchorSmoothScroll, $anchorScroll,$document, $window) {
 
-	$scope.collapse = true;
-	$scope.width = $window.innerWidth;
-	$scope.sub1 = Math.log($scope.width);
-	$scope.sub2 = Math.log(9.8*$scope.width);
-	$scope.ln10 = Math.log(10)
-	$scope.sub25 = $scope.sub2/$scope.ln10
-	$scope.sub3 = 471*$scope.sub25
-	$scope.sub4 = 2096.96738123 - $scope.sub3;
-	$scope.height = 1000;
+//	$scope.collapse = true;
+//	$scope.width = $window.innerWidth;
+//	$scope.sub1 = Math.log($scope.width);
+//	$scope.sub2 = Math.log(9.8*$scope.width);
+//	$scope.ln10 = Math.log(10)
+//	$scope.sub25 = $scope.sub2/$scope.ln10
+//	$scope.sub3 = 471*$scope.sub25
+//	$scope.sub4 = 2096.96738123 - $scope.sub3;
+//	$scope.height = 1000;
 
 
     $scope.teachers = [
@@ -31,19 +31,19 @@ angular.module('yapp')
       ["Wayne Conley", "Fifth/Sixth Grade", "../images/7.png", "Wayne Conley holds a Bachelor's degree from UC Santa Barbara, and earned his Master's degree and teaching credential from the University of Phoenix.  Mr. Conley has six years of teaching experience, mostly as a middle school Science teacher.  He has taught in Blossom Hill, Santa Clara, and Watsonville.  Mr. Conley's passion is in the STEM fields, and he enjoys teaching science in a hands-on style.  He loves spending time outdoors, including when he's teaching!"]
     ]
  $scope.dynamicPopover = {
-    content: 'Chris has more than 20 years of experience with project-based learning instruction and leadership for grades K-8. He grew up in Concord, Massachusetts, attended Boston University as an undergraduate, got his Masters In Education from the University of Massachusetts (School Leadership), and attended Villanova’s MBA program.',
+    content: 'A graduate of Boston University, Chris has over twenty years experience as both a math teacher and charter school leader..',
     templateUrl: 'myPopoverTemplate.html',
-    title: "Chris's Bio"
+    title: "Christopher Mahoney's Bio"
   };
 	$scope.dynamicPopover2 = {
-    content: 'Chris has more than 20 years of experience with project-based learning instruction and leadership for grades K-8. He grew up in Concord, Massachusetts, attended Boston University as an undergraduate, got his Masters In Education from the University of Massachusetts (School Leadership), and attended Villanova’s MBA program.',
+    content: 'Prior to coming to Spark, Martha worked at the German International School in Palo Alto.  Her many years of experience in the financial sector has focused on both schools and non-profit organizations.',
     templateUrl: 'myPopoverTemplate.html',
-    title: "Chris's Bio"
+    title: "Martha Branch's Bio"
   };
 	$scope.dynamicPopover3 = {
-    content: 'Chris has more than 20 years of experience with project-based learning instruction and leadership for grades K-8. He grew up in Concord, Massachusetts, attended Boston University as an undergraduate, got his Masters In Education from the University of Massachusetts (School Leadership), and attended Villanova’s MBA program.',
+    content: 'Jenny has over twenty years of experience working in Special Education with the Santa Clara County Board of Education.  In addition to her role within the school’s special education program, Jenny also serves as Dean of Student Life.',
     templateUrl: 'myPopoverTemplate.html',
-    title: "Chris's Bio"
+    title: "Jenny Garver's Bio"
   };
 
   $scope.placement = {
@@ -86,53 +86,30 @@ angular.module('yapp')
 
 	$scope.faq = [{
 		num: 1,
-		q:'What is a charter school?',
-		a:"Charter schools are publicly funded schools but function somewhat differently from traditional public schools. They operate independently under a performance agreement with a chartering authority (in Spark's case, the Santa Clara County Office of Education).  Because charter schools do not have to comply with certain sections of the state Education Code, they are less regulated and have more independence in making decisions than traditional public schools. Instead, they are governed primarily by their charters, which are generally granted for five years and renewed based on the school's performance.  Charter schools allow parents, organizations, or community groups to restore, reinvent, and re-energize our public school system."
+		q:'How large is Spark Charter School?  What are the school times?',
+		a:"Spark is a K-8 charter school with 200 students for the 16-17 school year.  The plan is to grow as we expand our school to a projected size of 400 students over the next six years.  Kindergarten attends Monday-Friday 8:30 AM - 1:00 PM.  Grades 1-8 attends 8:30 Am - 3:15 PM Monday-Friday except on Wednesdays when there is a weekly Minimum Day:  8:30 AM-1:00 PM for all students."
 	},
 		{
 		num:2,
-		q:"How are charter schools funded?",
-		a:"Charter schools are publicly funded based on student enrollment by local, state and federal tax dollars, just like other public schools."
+		q:"How is a charter school different from a public school?",
+		a:"A charter school is a public school.  The only real difference is that any family can apply to a charter school.  You do not have to live in Sunnyvale to apply for enrollment."
 	},
 		{
 		num:3,
-		q:"Is Spark a For-Profit or Corporate Charter School?",
-		a:"No, Spark Charter is a non-profit charter school which was formed by a group of Sunnyvale parents, with the assistance of a group of education experts, who wanted to see this type of educational option available in Sunnyvale as it is in so many other surrounding cities (San Jose, San Carlos, Cupertino, Mountain View, Santa Clara, etc.)"
+		q:"Is there an admissions process?",
+		a:"No.  As a public school, we have to be open and accessible to all interested families.  The process is to register and, if there are more students than spots available, Spark will have a lottery to fairly determine who is admitted."
 	},
 		{
 		num:4,
-		q:"Who is eligible to apply? ",
-		a:"Any student wishing to attend a Charter school can apply.  Charter schools must typically give admission priority to students residing within their district, and then may admit students from outside the district if there is space."
-	},
-		{
-		num:5,
-		q:"How is a charter school different from the schools of choice in the district?",
-		a:"Charter schools are exempt from some of the regulations that apply to other public schools. They have more flexibility in creating curriculum, and can also offer novel educational approaches. Charter schools must meet the same standards of quality that apply to all public schools."
-	},{
-		num:6,
-		q:"Do charter schools select only the high performing students or benefit from self-selection?",
-		a:"No.  Charter schools are public schools and cannot discriminate or self-select their students.  Spark Charter in particular places very high value on racial, ethnic, socio-economic, and cultural diversity, and is committed to reaching out to all populations within its community."
-	},{
-		num:7,
-		q:"Does Spark have before and after-school care?",
-		a:"Yes, Spark offers before-school care from 7:30-8:30 am, and after-school care from 3-6 pm.  "
-	},{
-		num:8,
-		q:"How will Spark measure student achievement?",
-		a:"Students will be assessed at regular intervals according to the common core standards, as charter schools are held to the same standards as traditional public schools. Although it is not Spark's philosophy to teach to the test, student performance is very important and will be tracked diligently using formal and informal assessments. As a part of the informal assessments, Spark will use individual learning plans for each of its students, where personalized goals are set up at the beginning of a trimester and revisited throughout the year."
-	}
-	,{
-		num:9,
-		q:"Will I be required to volunteer at school?",
-		a:"By law, no public school (district or charter) can require parent participation.  Parent participation at Spark is not a requirement for application, and no child will be denied enrollment because parents have not participated.  Spark encourages parent participation from every family in whatever way is manageable for them. Having regular volunteers in the classroom and in the Spark community is the only way Spark can deliver on its promise of small-group, project-based instruction.  Please visit our Parents as Partners page for more details. "
-	}
-	,{
-		num:10,
-		q:"But I'm not a teacher; how can I possibly be helpful?",
-		a:"Many parents have a fear of participating in their child's classroom because they're not sure they have anything valuable to offer.  We are here to prove you wrong!!  Every parent can and will make a difference in our children's education by participating   There are infinite ways to get involved that will help enrich the learning experience of all Spark students. It could be teaching students how to cook traditional dishes from your native culture (here we have chemistry, math, geography, history, and life skills all wrapped up into one fun activity!)   Or it might be helping to organize a community gardening event on the weekend. Can you help with foreign language instruction or tutor an EL student?  Are you good at carpentry? Sports? Music?  Everyone has a talent, and students can benefit immensely from exposure to a wide range of skills and knowledge.  Research shows that the more parents are involved at school, the greater their child's achievement level. Having volunteers in our classrooms will help our teachers deliver the hands-on, small group instruction that is fundamental to Spark. "
+		q:"Why doesn’t Spark accept all interested students? ",
+		a:"We would if we could!  Unfortunately, we are limited in size because of issues pertaining to the local school district."
 	}];
+	
+	$scope.faqnum = $scope.faq.length;
+	$scope.faqhalf = Math.floor($scope.faqnum/2);
+	
 
-	 $scope.items = ['item1', 'item2', 'item3'];
+	 $scope.items = ['Usha Ramos', 'Melissa Hasan', 'Jay Levin', 'Joe Callinan'];
 
   $scope.animationsEnabled = true;
 
