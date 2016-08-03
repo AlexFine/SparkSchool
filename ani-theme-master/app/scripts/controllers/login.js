@@ -10,13 +10,13 @@
 angular.module('yapp')
   .controller('HomeCtrl', function($scope, $location,  $uibModal, $log, $sce, anchorSmoothScroll, $anchorScroll,$document, $window) {
 
-//	$scope.collapse = true;
+	$scope.collapse = true;
 //	$scope.width = $window.innerWidth;
 //	$scope.sub1 = Math.log($scope.width);
 //	$scope.sub2 = Math.log(9.8*$scope.width);
 //	$scope.ln10 = Math.log(10)
 //	$scope.sub25 = $scope.sub2/$scope.ln10
-//	$scope.sub3 = 471*$scope.sub25
+//	$scope.sub3 = 4collapsed71*$scope.sub25
 //	$scope.sub4 = 2096.96738123 - $scope.sub3;
 //	$scope.height = 1000;
 
