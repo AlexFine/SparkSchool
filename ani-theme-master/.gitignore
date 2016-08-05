@@ -1,5 +1,4 @@
 node_modules/
-app/bower_components/
 .tmp/
 #dist/
 gen/
