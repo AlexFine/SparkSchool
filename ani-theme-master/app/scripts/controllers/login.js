@@ -30,17 +30,17 @@ angular.module('yapp')
  $scope.dynamicPopover = {
     content: 'A graduate of Boston University, Chris has over twenty years experience as both a math teacher and charter school leader.',
     templateUrl: 'myPopoverTemplate.html',
-    title: "Christopher Mahoney's Bio"
+    title: "Christopher Mahoney"
   };
 	$scope.dynamicPopover2 = {
     content: 'Prior to coming to Spark, Martha worked at the German International School in Palo Alto.  Her many years of experience in the financial sector has focused on both schools and non-profit organizations.',
     templateUrl: 'myPopoverTemplate.html',
-    title: "Martha Branch's Bio"
+    title: "Martha Branch"
   };
 	$scope.dynamicPopover3 = {
     content: 'Director of Special Education.  Jenny has over twenty years of experience working in Special Education with the Santa Clara County Board of Education.  In addition to her role within the school’s special education program, Jenny also serves as Dean of Student Life.',
     templateUrl: 'myPopoverTemplate.html',
-    title: "Jenny Garver's Bio"
+    title: "Jenny Garver"
   };
 
   $scope.placement = {
@@ -151,6 +151,29 @@ angular.module('yapp')
       $log.info('Modal dismissed at: ' + new Date());
     });
   };
+	
+	
+	$scope.opendonate = function (size) {
+
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'myModalContentDonate.html',
+      controller: 'ModalInstanceCtrl',
+      size: size,
+      resolve: {
+        items: function () {
+          return $scope.teachers;
+        }
+      }
+    });
+
+    modalInstance.result.then(function (selectedItem) {
+      $scope.selected = selectedItem;
+    }, function () {
+      $log.info('Modal dismissed at: ' + new Date());
+    });
+  };
+	
 
   $scope.toggleAnimation = function () {
     $scope.animationsEnabled = !$scope.animationsEnabled;
