@@ -24,3 +24,5 @@ In the source, we have the less files of Bootstrap attached and the variables ha
 ### Automation tools
 
 - [Gulp](http://gulpjs.com/)
+
+to deploy run gulp watch and firebase deploy at the same time.

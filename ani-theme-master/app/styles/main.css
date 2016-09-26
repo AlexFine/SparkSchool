@@ -6470,7 +6470,7 @@ button.close {
   height: 125px;
 }
 .home-page {
-  background: #5cb85c;
+  background: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -6662,11 +6662,10 @@ button.close {
 }
 .home-page .eight {
   text-align: center;
-  width: 500px;
+  width: 60%;
 }
 .home-page .nine {
   text-align: center;
-  width: 700px;
 }
 .home-page .lean {
   font-weight: 200;
@@ -6709,6 +6708,7 @@ button.close {
   margin: 5%;
   color: grey;
   text-align: left;
+  background: white;
 }
 .home-page .input {
   border: 1px solid #C8C8C8;
@@ -6725,6 +6725,12 @@ button.close {
   height: auto;
   width: 100%;
   color: white;
+}
+.home-page .myTools {
+  height: 50px;
+  width: 100%;
+  text-align: left;
+  background: #5fb65f;
 }
 .dashboard-page {
   position: absolute;
@@ -6860,7 +6866,7 @@ button.close {
   top: 200px;
 }
 .admission-page {
-  background: #5cb85c;
+  background: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -6925,7 +6931,7 @@ button.close {
 }
 .admission-page .standardButtonInverse {
   border-radius: 10px;
-  border: 2px solid #5fb65f;
+  border: 2px solid #e8ac57;
   background: white;
   padding: 10px;
   padding-right: 15px;
@@ -6943,7 +6949,7 @@ button.close {
   font-size: 17px;
 }
 .admission-page .bottom {
-  background: #5fb65f;
+  background: #e8ac57;
 }
 .admission-page .container1 {
   width: 100%;
@@ -6951,10 +6957,11 @@ button.close {
   text-align: left;
 }
 .admission-page .container2 {
-  height: 60%;
+  height: auto;
+  margin-bottom: 20px;
   width: 100%;
   text-align: center;
-  color: #5fb65f;
+  color: #e8ac57;
   background: white;
 }
 .admission-page .container3 {
@@ -7008,7 +7015,7 @@ button.close {
 }
 .admission-page .eight {
   text-align: center;
-  width: 500px;
+  width: 60%;
 }
 .admission-page .lean {
   font-weight: 200;
@@ -7046,7 +7053,7 @@ button.close {
   padding: 40px 0;
 }
 .academics-page {
-  background: #5bc0de;
+  background: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -7180,6 +7187,13 @@ button.close {
   text-align: center;
   color: white;
 }
+.academics-page .container7inverse {
+  height: 100px;
+  width: 100%;
+  background: white;
+  text-align: center;
+  color: #60c0dc;
+}
 .academics-page .container6 {
   height: auto;
   width: 101.1%;
@@ -7226,7 +7240,7 @@ button.close {
 }
 .academics-page .eight {
   text-align: center;
-  width: 500px;
+  width: 60%;
 }
 .academics-page .lean {
   font-weight: 200;
@@ -7371,10 +7385,10 @@ button.close {
 	}
 */
 }
-/* Have to set height explicity on ui-view
+/* Have to set height explicity on ui-view 
 to prevent collapsing during animation*/
 /*.well[ui-view]{
- height: 65px;
+ height: 65px; 
 }*/
 [ui-view] {
   position: absolute;
